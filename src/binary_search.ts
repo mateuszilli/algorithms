@@ -13,7 +13,6 @@ export function binary_search(arr: number[], el: number): number | null {
             hi = mid - 1
         else
             lo = mid + 1
-
     }
 
     return null

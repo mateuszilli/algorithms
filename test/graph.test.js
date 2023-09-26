@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { Graph } from "./graph"
+import { Graph } from "../src/graph"
 
 
 /*
