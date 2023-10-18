@@ -1,3 +1,3 @@
 # algorithms
 
-Algorithm implementations in popular languages
+Algorithms implementations in popular languages
