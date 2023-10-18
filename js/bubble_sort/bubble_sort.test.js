@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { bubble_sort } from "../src/bubble_sort"
+import { bubble_sort } from "./bubble_sort"
 
 test("bubble_sort", () => {
     expect(bubble_sort([1])).toEqual([1])

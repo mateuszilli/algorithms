@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { binary_search } from "../src/binary_search"
+import { binary_search } from "./binary_search"
 
 test("binary_search", () => {
     expect(binary_search([1, 3, 5, 7, 10], 11)).toBe(null)

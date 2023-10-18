@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { quick_sort } from "../src/quick_sort"
+import { quick_sort } from "./quick_sort"
 
 test("quick_sort", () => {
     expect(quick_sort([1])).toEqual([1])

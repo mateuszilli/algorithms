@@ -1,20 +1,5 @@
 import { expect, test } from "bun:test"
-import { Graph } from "../src/graph"
-
-
-/*
-
-1 5 6
-3 2 8
-4 7 X
-
-1 2 3
-4 5 6
-7 8 X
-
-You can move X to up, down, left right to order the board and then return the number of min steps
-
-*/
+import { Graph } from "./graph"
 
 const graphString = new Graph({
     A: ['B', 'D'],                          //      
