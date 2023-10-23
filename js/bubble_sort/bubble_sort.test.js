@@ -12,5 +12,7 @@ test("bubble_sort", () => {
 
     const amount = 1_000;
     const array = Array.from({length: amount}, () => Math.floor(Math.random() * amount))
-    expect(bubble_sort(array)).toEqual(array.sort((a, b) => a - b))
+    const n_array = [...array]
+
+    expect(bubble_sort(array)).toEqual(n_array.sort((a, b) => a - b))
 })
