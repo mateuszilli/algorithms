@@ -18,7 +18,7 @@ export class LinkedList<T> {
         } else {
            this.head.prev = linkedNode
            linkedNode.next = this.head
-           this.head = linkedNode 
+           this.head = linkedNode
         }
 
         this.length++
@@ -43,14 +43,38 @@ export class LinkedList<T> {
     }
 
     removeAtHead(): T | null {
-        return null;
+        if (!this.head) return null
+
+        const data = this.head.data
+
+        if (!this.head.next) {
+            this.head = this.tail = null
+        } else {
+            this.head = this.head.next
+            this.head.prev = null
+        }
+
+        this.length--
+
+        return data
     }
 
     removeAtTail(): T | null {
-        return null;
+        if (!this.tail) return null
+
+        const data = this.tail.data
+       
+        if (!this.tail.prev) {
+            this.tail = this.head = null
+        } else {
+            this.tail = this.tail.prev
+            this.tail.next = null
+        }
+
+        this.length--
+
+        return data
     }
 
-    size(): number {
-        return this.length
-    }
+    size(): number { return this.length }
 }

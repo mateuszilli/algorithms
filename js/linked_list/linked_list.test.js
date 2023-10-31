@@ -8,6 +8,14 @@ test('linked_list', () => {
     linked_list.insertAtTail(3)
     linked_list.insertAtTail(4)
     linked_list.insertAtHead(1)
+    linked_list.insertAtHead(10)
+    linked_list.insertAtTail(20)
+    linked_list.insertAtTail(30)
+    linked_list.insertAtHead(40)
+    linked_list.removeAtHead()
+    linked_list.removeAtTail()
+    linked_list.removeAtTail()
+    linked_list.removeAtHead()
 
     let listFromHeadToTail = []
     let listFromTailToHead = []

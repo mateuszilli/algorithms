@@ -8,7 +8,7 @@ const graphString = new Graph({
     D: ['A', 'E'],                          //      .     .
     E: ['B', 'D', 'F'],                     //      D . . E . . F
     F: ['E'],                               //
-});
+})
 
 const graphNumber = new Graph({
     0: [1, 3],                              //
@@ -17,7 +17,7 @@ const graphNumber = new Graph({
     3: [0, 4],                              //      .     .
     4: [1, 3, 5],                           //      3 . . 4 . . 5
     5: [4],                                 //
-});
+})
 
 test('graph_bfs', () => {
     expect(graphString.BFS('A')).toEqual(['A', 'B', 'D', 'C', 'E', 'F'])
