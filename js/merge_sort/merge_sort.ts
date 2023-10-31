@@ -12,7 +12,7 @@ function merge(left: number[], right: number[]): number[] {
 export function merge_sort(arr: number[]): number[] {
     if (arr.length < 2) return arr
 
-    const mid = arr.length / 2
+    const mid = Math.floor(arr.length / 2)
     const left = arr.splice(0, mid)
     return merge(merge_sort(left), merge_sort(arr))
 }
