@@ -1,6 +1,6 @@
 class BinaryTreeNode {
-    left: BinaryTreeNode | null = null
-    right: BinaryTreeNode | null = null
+    public left: BinaryTreeNode | null = null
+    public right: BinaryTreeNode | null = null
 
     constructor (public value: number) {}
 }
@@ -45,7 +45,7 @@ export class BinaryTree {
         }
     }
     
-    DFSpostOrderTraversal(root = this.root) {
+    public DFSpostOrderTraversal(root = this.root) {
         const result: number[] = []
 
         postOrderTraversal(root)
@@ -60,7 +60,7 @@ export class BinaryTree {
         }
     }
     
-    DFSpreOrderTraversal(root = this.root) {
+    public DFSpreOrderTraversal(root = this.root) {
         const result: number[] = []
 
         preOrderTraversal(root)
@@ -75,7 +75,7 @@ export class BinaryTree {
         }
     }
 
-    BFSlevelOrderTraversal(root = this.root) {
+    public BFSlevelOrderTraversal(root = this.root) {
         const result: number[] = []
         const queue = [root]
 
