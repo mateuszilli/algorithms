@@ -61,8 +61,9 @@ export class MaxHeap extends Heap {
     protected heapifyUp(): void {
         let index = this.heap.length - 1
         while (this.hasParent(index) && this.parent(index) < this.heap[index]) {
-            this.swap(this.getParentIndex(index), index)
-            index = this.getParentIndex(index)
+            const parentIndex = this.getParentIndex(index)
+            this.swap(parentIndex, index)
+            index = parentIndex
         }
     }
     
@@ -87,8 +88,9 @@ export class MinHeap extends Heap {
 	protected heapifyUp(): void {
 		let index = this.heap.length - 1
 		while (this.hasParent(index) && this.parent(index) > this.heap[index]) {
-			this.swap(this.getParentIndex(index), index)
-			index = this.getParentIndex(index)
+            const parentIndex = this.getParentIndex(index)
+			this.swap(parentIndex, index)
+			index = parentIndex
 		}
 	}
 

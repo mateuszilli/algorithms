@@ -8,21 +8,29 @@ class BinaryTreeNode {
 export class BinaryTree {
     private root: BinaryTreeNode | null = null
 
-    public add(data: number): BinaryTreeNode | null {
+    public add(data: number): void {
         const binaryTreeNode = new BinaryTreeNode(data)
 
         if (!this.root) {
-            return this.root = binaryTreeNode
+            this.root = binaryTreeNode
         } else {
             let current = this.root
-            while (true) {
-                if (binaryTreeNode.value === current.value) return null
+            while (current) {
+                if (binaryTreeNode.value === current.value) return
                 if (binaryTreeNode.value < current.value) {
-                    if (!current.left) return current.left = binaryTreeNode
+                    if (!current.left) {
+                        current.left = binaryTreeNode
+                        return
+                    }
+
                     current = current.left
                 }
                 if (binaryTreeNode.value > current.value) {
-                    if (!current.right) return current.right = binaryTreeNode
+                    if (!current.right) { 
+                        current.right = binaryTreeNode
+                        return
+                    }
+
                     current = current.right
                 }
             }
@@ -87,7 +95,6 @@ export class BinaryTree {
             if (node.right) queue.push(node.right)
 
             result.push(node.value)
-
         }
 
         return result
